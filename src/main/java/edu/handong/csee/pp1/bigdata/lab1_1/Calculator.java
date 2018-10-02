@@ -80,6 +80,11 @@ public class Calculator {
 	void print(String prefix, int result) {
 		System.out.println(prefix + " " + result);
 	}
+	
+	//new part for divide
+	void print(String prefix, double result) {
+		System.out.println(prefix + " " + result);
+	}
 
 	int sum(int first, int second) {
 		countForAnyCompution++;
@@ -90,7 +95,9 @@ public class Calculator {
 	int subtract(int first, int second) {
 		countForAnyCompution++;
 		localCount++;
-		return first + second;
+		//bug --> this is subtract method!
+		//return first + second;
+		return first - second;
 	}
 
 	int multiply(int first, int second) {
@@ -99,10 +106,24 @@ public class Calculator {
 		return first * second;
 	}
 
-	int divide(int first, int second) {
+	double divide(int first, int second) {
+		//if second is 0, then it must access on error.
+		//initialize result as -1
+		if(second == 0) {
+			return Double.NaN;
+		}
+
 		countForAnyCompution++;
 		localCount++;
 		return first / second;
+		//to deal with the error, use try & catch
+//		try {
+//			result = first / second;
+//		}
+//		catch(ArithmeticException e ) {
+//			return Double.NaN;
+//		}
+//		return result;
 	}
 
 	int mod(int first, int second) {
