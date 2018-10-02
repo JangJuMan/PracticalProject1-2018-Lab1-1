@@ -71,6 +71,7 @@ public class Calculator {
 		print("DV:" , divide(firstIntArg,secondIntArg));
 		//new part for test
 		print("Mod:" , mod(firstIntArg, secondIntArg));
+		System.out.println("Executing Test Done");
 	}
 
 	
