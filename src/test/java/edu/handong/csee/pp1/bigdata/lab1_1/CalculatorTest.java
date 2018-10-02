@@ -36,9 +36,9 @@ public class CalculatorTest {
 	@Test
 	public void testMultiply() {
 		// TODO Complete this test case
-//		Calculator myCalc = new Calculator();
-//		assertEquals(myCalc.multiply(5, 3),15);
-//		assertEquals(myCalc.multiply(7, 0),0);
+		Calculator myCalc = new Calculator();
+		assertEquals(myCalc.multiply(5, 3),15);
+		assertEquals(myCalc.multiply(7, 0),0);
 		
 	}
 	
