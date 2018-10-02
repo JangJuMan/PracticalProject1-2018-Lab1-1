@@ -29,11 +29,17 @@ public class CalculatorTest {
 	@Test
 	public void testMod() {
 		// TODO Complete this test case
+		Calculator myCalc = new Calculator();
+		assertEquals(myCalc.mod(5, 3),2);
 	}
 
 	@Test
 	public void testMultiply() {
 		// TODO Complete this test case
+//		Calculator myCalc = new Calculator();
+//		assertEquals(myCalc.multiply(5, 3),15);
+//		assertEquals(myCalc.multiply(7, 0),0);
+		
 	}
 	
 	@Test
@@ -41,5 +47,6 @@ public class CalculatorTest {
 		Calculator myCalc = new Calculator();
 		assertEquals(myCalc.divide(1, 1),1, 0.00000001);
 		assertEquals(myCalc.divide(2, 0),Double.NaN, 0.00000001);
+		
 	}
 }
